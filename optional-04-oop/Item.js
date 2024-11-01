@@ -9,7 +9,26 @@
  *   ```
  */
 
-class Item {}
+class Item {
+    constructor(id, name, quantity, price){
+        if(typeof id === 'number' && typeof name === 'string' && typeof quantity ==='number' && typeof price === 'number'){
+            this.id = id;
+            this.name = name;
+            this.quantity = quantity;
+            this.price = price;
+        }
+    }
+
+    updateDetails(newName, newQuantity, newPrice){
+        this.name = newName;
+        this.quantity = newQuantity;
+        this.price = newPrice;
+    }
+
+    displayDetails(){
+        return `ID: ${id}, Name: ${name}, Quantity: ${quantity}, Price: ${price}`;
+    }
+}
 
 // Jangan hapus kode di bawah ini!
 export default Item;
